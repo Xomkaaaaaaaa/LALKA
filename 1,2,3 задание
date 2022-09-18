@@ -1,0 +1,21 @@
+from collections import Counter
+phone = {
+'iPhone 14 Pro': {'size': '6.7-inch (diagonal)', 'OM': '1TB', 'OS':'IOS', 'Firma': 'Apple'},
+'iPhone 14 Plus': {'size': '6.7-inch (diagonal)', 'OM': '512GB', 'OS':'IOS', 'Firma': 'Apple'},
+'Samsung S22 ULTRA': {'size': '6.8-inch (diagonal)', 'OM': '1TB', 'OS': 'Android', 'Firma': 'Samsung'},
+'Samsung A52': {'size': '6.5-inch (diagonal)', 'OM': '256GB', 'OS': 'Android', 'Firma': 'Samsung'},
+'iPhone 14': {'size': '6.1-inch (diagonal)', 'OM': '512GB', 'OS':'IOS', 'Firma': 'Apple'},
+}
+
+p = {}
+x = set()
+for i in phone.values():
+for j, k in i.items():
+if not k in x:
+p[j]=1
+x.add(k)
+else: p[j] +=1
+print(p ['OM'])
+print(p)
+print('key - OM, значение - ', p['OM'])
+print('Все значения', sorted(p.values(), reverse=True))
